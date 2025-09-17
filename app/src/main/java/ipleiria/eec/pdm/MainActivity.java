@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private Random gerador = new Random(); //para gerar valor aleatório
     private int valorAleatorio = gerarValorAleatorio(1, 10); //valor aleatório entre 1 e 10
     private int tentativas = 3; //número de tentativas
+    private TextView ver_tentativas;
+    private TextView resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
         if (tentativas > 0) {
             if (txtNumero.getText().toString().trim().equals("")) {
-                TextView resultado = findViewById(R.id.textViewResultado);
+                resultado = findViewById(R.id.textViewResultado);
                 resultado.setText(getResources().getString(R.string.txtNaoPreencheu));
                 return;
             }
             int guess = Integer.parseInt(txtNumero.getText().toString());
             if (guess == valorAleatorio) {
-                TextView resultado = findViewById(R.id.textViewResultado);
+                resultado = findViewById(R.id.textViewResultado);
                 resultado.setText(getResources().getString(R.string.txtAcertou));
                 resultado.setTextColor(Color.GREEN);
                 tentativas = 0; // termina o jogo
@@ -57,18 +59,19 @@ public class MainActivity extends AppCompatActivity {
                 tentativas--;
                 if (tentativas > 0) {
                     if (guess > valorAleatorio) {
-                        TextView resultado = findViewById(R.id.textViewResultado);
+                        resultado = findViewById(R.id.textViewResultado);
                         resultado.setText(getResources().getText(R.string.txtValorAbaixo));
                     } else {
-                        TextView resultado = findViewById(R.id.textViewResultado);
+                        resultado = findViewById(R.id.textViewResultado);
                         resultado.setText(getResources().getText(R.string.txtValorAcima));
                     }
                     TextView ver_tentativas = findViewById(R.id.textViewTentativas);
                     ver_tentativas.setText(String.valueOf(tentativas));
                 } else {
-                    TextView resultado = findViewById(R.id.textViewResultado);
-                    TextView ver_tentativas = findViewById(R.id.textViewTentativas);
+                    resultado = findViewById(R.id.textViewResultado);
+                    ver_tentativas = findViewById(R.id.textViewTentativas);
                     ver_tentativas.setText(getResources().getString(R.string.txtSemTentativas));
+                    ver_tentativas.setTextColor(Color.RED);
                 }
             }
         } else {
