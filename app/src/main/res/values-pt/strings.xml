@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SegundaApp</string>
+    <string name="btnAdivinha">Adivinha</string>
+    <string name="txtAcertou">Acertou</string>
+    <string name="txtHintValorAdivinha">Valor entre 1 e 10</string>
+    <string name="txtNaoPreencheu">Indique um valor</string>
+    <string name="txtValorAbaixo">Valor abaixo</string>
+    <string name="txtValorAcima">Valor acima</string>
+</resources>

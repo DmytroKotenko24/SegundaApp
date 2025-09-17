@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SecondApp</string>
+    <string name="btnAdivinha">Guess</string>
+    <string name="txtAcertou">You got it</string>
+    <string name="txtHintValorAdivinha">Value between 1 and 10</string>
+    <string name="txtNaoPreencheu">Put a value</string>
+    <string name="txtValorAbaixo">Bellow value</string>
+    <string name="txtValorAcima">Above value</string>
+</resources>
