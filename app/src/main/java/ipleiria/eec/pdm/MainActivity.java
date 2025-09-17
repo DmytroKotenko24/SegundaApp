@@ -86,4 +86,14 @@ public class MainActivity extends AppCompatActivity {
         return valor;
     }
 
+    public void onClickReinicia(View view) {
+        valorAleatorio = gerarValorAleatorio(1, 10);
+        tentativas = 3;
+        resultado = findViewById(R.id.textViewResultado);
+        resultado.setText("");
+        ver_tentativas = findViewById(R.id.textViewTentativas);
+        ver_tentativas.setText(String.valueOf(tentativas));
+        ver_tentativas.setTextColor(Color.BLACK);
+        txtNumero.setText("");
+    }
 }
