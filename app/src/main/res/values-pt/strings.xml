@@ -7,4 +7,5 @@
     <string name="txtNaoPreencheu">Indique um valor</string>
     <string name="txtValorAbaixo">Valor abaixo</string>
     <string name="txtValorAcima">Valor acima</string>
+    <string name="txtSemTentativas">Excedeu tentativas</string>
 </resources>
