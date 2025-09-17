@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private int tentativas = 3; //número de tentativas
     private TextView ver_tentativas;
     private TextView resultado;
+    private int numerosCertos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         valorAleatorio = gerarValorAleatorio(1, 10);
     }
 
-
     public void onClickAdivinha(View view) {
 
         if (tentativas > 0) {
+
             if (txtNumero.getText().toString().trim().equals("")) {
                 resultado = findViewById(R.id.textViewResultado);
                 resultado.setText(getResources().getString(R.string.txtNaoPreencheu));
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 resultado.setText(getResources().getString(R.string.txtAcertou));
                 resultado.setTextColor(Color.GREEN);
                 tentativas = 0; // termina o jogo
+                numerosCertos++;
+                // Exibe o número de acertos sem o toast apenas em uma TextView
+                TextView ver_acertos = findViewById(R.id.textViewCertos);
+                ver_acertos.setText(getResources().getString(R.string.txtNumerosCertos) + ": " + numerosCertos);
             } else {
                 tentativas--;
                 if (tentativas > 0) {
@@ -95,5 +100,10 @@ public class MainActivity extends AppCompatActivity {
         ver_tentativas.setText(String.valueOf(tentativas));
         ver_tentativas.setTextColor(Color.BLACK);
         txtNumero.setText("");
+
+        resultado.setTextColor(Color.BLACK);
+        ver_tentativas.setTextColor(Color.BLACK);
     }
 }
+
+/* Made by Dmytro Kotenko */

@@ -9,4 +9,5 @@
     <string name="txtValorAcima">Valor acima</string>
     <string name="txtSemTentativas">Excedeu tentativas</string>
     <string name="btnReiniciar">Reiniciar</string>
+    <string name="txtNumerosCertos">Numeros adivinhados</string>
 </resources>

@@ -8,4 +8,5 @@
     <string name="txtValorAcima">Above value</string>
     <string name="txtSemTentativas">No attemps left!</string>
     <string name="btnReiniciar">Reset</string>
+    <string name="txtNumerosCertos">Guessed numbers</string>
 </resources>
