@@ -55,9 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 resultado = findViewById(R.id.textViewResultado);
                 resultado.setText(getResources().getString(R.string.txtAcertou));
                 resultado.setTextColor(Color.GREEN);
-                tentativas = 0; // termina o jogo
+                tentativas = 0;
                 numerosCertos++;
-                // Exibe o número de acertos sem o toast apenas em uma TextView
                 TextView ver_acertos = findViewById(R.id.textViewCertos);
                 ver_acertos.setText(getResources().getString(R.string.txtNumerosCertos) + ": " + numerosCertos);
             } else {
@@ -98,9 +97,7 @@ public class MainActivity extends AppCompatActivity {
         resultado.setText("");
         ver_tentativas = findViewById(R.id.textViewTentativas);
         ver_tentativas.setText(String.valueOf(tentativas));
-        ver_tentativas.setTextColor(Color.BLACK);
         txtNumero.setText("");
-
         resultado.setTextColor(Color.BLACK);
         ver_tentativas.setTextColor(Color.BLACK);
     }
